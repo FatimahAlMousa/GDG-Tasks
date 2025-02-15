@@ -5,15 +5,9 @@ public class Task22 {
         
         String Name = JOptionPane.showInputDialog("Enter your name");
 
-        if (Name != null) {
-            int count = 0;
+        if (Name != null && !Name.trim().isEmpty()) {  
+            int count = Name.length(); 
 
-           
-            for (int i = 0; i < Name.length(); i++) {
-                count++;
-            }
-
-            
             JOptionPane.showMessageDialog(null, Name + " has " + count + " characters.", "Character Count", JOptionPane.PLAIN_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "No name entered.", "Error", JOptionPane.ERROR_MESSAGE);
